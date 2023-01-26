@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IUser } from 'src/app/models/person';
+import { IUser } from 'src/app/models/user';
 import { UsersService } from 'src/app/services/users.service';
 
 @Component({
@@ -34,7 +34,7 @@ export class UsersPageComponent {
 
   createUser(): void {
     this.usersService.createUser(this.data).subscribe({
-      next: (data) => { this.data = data; document.location.reload() }
+      next: () => { document.location.reload() }
     })
   }
 }

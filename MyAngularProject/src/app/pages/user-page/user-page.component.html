@@ -1,16 +1,56 @@
 <h1>{{title}}</h1>
 
-<div class="border border-gray-300 rounded w-max p-3 my-3">
-    <h1>id: {{user.id}}</h1>
-    <p>name: {{user.name}} </p>
-    <p>surname: {{user.surname}} </p>
+<div class="border border-gray-300 rounded w-max p-3 my-2">
+    <h1><span class="font-light">Id: </span>{{user.id}}</h1>
+    <p><span class="font-light">Name: </span>{{user.name}} </p>
+    <p><span class="font-light">Surname: </span>{{user.surname}} </p>
 </div>
 
-<button class="mb-2 w-[110px] h-[35px] block bg-blue-400 border border-gray-700" (click)="isChecked = !isChecked">
-    Update
-</button>
+<div>
+    <button class="mb-2 mr-2 w-[110px] h-[35px] inline-block bg-blue-400 border border-gray-700"
+        (click)="postsIsChecked = !postsIsChecked">
+        Posts
+    </button>
 
-<div *ngIf="isChecked" class="mb-3">
+    <button class="mb-2 mr-2 w-[110px] h-[35px] inline-block bg-blue-400 border border-gray-700"
+        (click)="createPostIsChecked = !createPostIsChecked">
+        Create Post
+    </button>
+
+    <button class="mb-2 mr-2 w-[110px] h-[35px] inline-block bg-blue-400 border border-gray-700"
+        (click)="updateIsChecked = !updateIsChecked">
+        Update User
+    </button>
+
+    <button class="mb-2 mr-2 w-[110px] h-[35px] inline-block bg-red-400 border border-gray-700" (click)="deleteUser()">
+        Delete User
+    </button>
+</div>
+
+<div *ngIf="postsIsChecked" class="mb-2">
+    <app-post *ngFor="let post of posts" [post]="post"></app-post>
+</div>
+
+<div *ngIf="createPostIsChecked">
+    <form>
+        <div class="flex flex-col">
+            <label for="title">Title</label>
+            <input type="text" id="title" name="Title" class="w-[500px] border rounded border-gray-300"
+                [(ngModel)]="data.title">
+        </div>
+        <div class="flex flex-col">
+            <label for="content">Content</label>
+            <textarea type="text" id="content" name="content" class="w-[500px] border rounded border-gray-300"
+                [(ngModel)]="data.content"></textarea>
+        </div>
+        <button class="mt-2 w-[110px] h-[35px] inline-block bg-blue-400 border border-gray-700" type="submit"
+            (click)="createPost()">
+            Confirm
+        </button>
+    </form>
+</div>
+
+<div *ngIf="updateIsChecked" class="mb-3">
     <form>
         <div class="flex flex-col">
             <label for="name">Name</label>
@@ -22,12 +62,9 @@
             <input type="text" id="surname" name="surname" class="w-[150px] border rounded border-gray-300"
                 [(ngModel)]="user.surname">
         </div>
-        <button type="submit" (click)="updateUser()">
+        <button class="mt-2 w-[110px] h-[35px] inline-block bg-blue-400 border border-gray-700" type="submit"
+            (click)="updateUser()">
             Confirm
         </button>
     </form>
 </div>
-
-<button class="mb-2 w-[110px] h-[35px] block bg-red-400 border border-gray-700" (click)="deleteUser()">
-    Delete User
-</button>

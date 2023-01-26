@@ -10,6 +10,9 @@ import { UserComponent } from './components/user/user.component';
 import { UsersPageComponent } from './pages/users-page/users-page.component';
 import { UserPageComponent } from './pages/user-page/user-page.component';
 import { FormsModule } from '@angular/forms';
+import { PostComponent } from './components/post/post.component';
+import { PostsPageComponent } from './pages/posts-page/posts-page.component';
+import { PostPageComponent } from './pages/post-page/post-page.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +22,9 @@ import { FormsModule } from '@angular/forms';
     UserComponent,
     UsersPageComponent,
     UserPageComponent,
+    PostComponent,
+    PostsPageComponent,
+    PostPageComponent,
   ],
   imports: [
     BrowserModule,

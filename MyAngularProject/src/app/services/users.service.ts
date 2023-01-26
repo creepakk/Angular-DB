@@ -1,7 +1,7 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { delay, Observable, retry, tap } from 'rxjs';
-import { IUser } from '../models/person';
+import { IUser } from '../models/user';
 
 @Injectable({
   providedIn: 'root'
