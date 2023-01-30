@@ -23,9 +23,9 @@ class UserController {
     }
     async deleteUser(req, res) {
         const id = req.params.id
-        const posts = db.query('DELETE FROM post WHERE user_id = $1', [id])
-        const user = await db.query(`DELETE FROM person WHERE id = $1`, [id])
-        res.json(user.rows[0], posts.rows)
+        await db.query('DELETE FROM post WHERE user_id = $1', [id])
+        await db.query(`DELETE FROM person WHERE id = $1`, [id])
+        res.json()
     }
 }
 

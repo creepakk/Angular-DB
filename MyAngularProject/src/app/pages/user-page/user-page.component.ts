@@ -59,7 +59,7 @@ export class UserPageComponent {
 
   deleteUser(): void {
     this.usersService.deleteUser(this.user.id).subscribe({
-      next: (res) => this.router.navigate(['/user'])
+      next: () => this.router.navigate(['user'])
     })
   }
 
@@ -71,7 +71,7 @@ export class UserPageComponent {
 
   createPost(): void {
     this.postsService.createPost(this.user.id, this.data).subscribe({
-      next: (data) => { this.data = data }
+      next: (data) => { this.data = data; document.location.reload() }
     })
   }
 }
