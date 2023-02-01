@@ -1,8 +1,8 @@
 const express = require('express')
 const cors = require('cors')
 
-const UserRouter = require('./router/user.router')
-const PostRouter = require('./router/post.router')
+const UserRouter = require('./src/router/user.router')
+const PostRouter = require('./src/router/post.router')
 
 const PORT = process.env.PORT || 8080
 
