@@ -14,20 +14,20 @@ export class PostsService {
 
   baseUrl = 'http://localhost:8080/api/post'
 
-  createPost(user_id: number, data: any): Observable<any> {
-    return this.http.post(`${this.baseUrl}/${user_id}`, data)
+  createPost(user_id: number, data: any): Observable<IPost> {
+    return this.http.post<IPost>(`${this.baseUrl}/${user_id}`, data)
   }
 
   getPost(id: number): Observable<IPost> {
     return this.http.get<IPost>(`${this.baseUrl}/${id}`)
   }
 
-  updatePost(id: number, data: any): Observable<any> {
-    return this.http.put(`${this.baseUrl}/${id}`, data)
+  updatePost(id: number, data: any): Observable<IPost> {
+    return this.http.put<IPost>(`${this.baseUrl}/${id}`, data)
   }
 
-  deletePost(id: number): Observable<any> {
-    return this.http.delete(`${this.baseUrl}/${id}`)
+  deletePost(id: number): Observable<IPost> {
+    return this.http.delete<IPost>(`${this.baseUrl}/${id}`)
   }
 
   getPosts(): Observable<IPost[]> {

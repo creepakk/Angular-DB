@@ -11,8 +11,8 @@ export class UsersService {
 
   baseUrl = 'http://localhost:8080/api/user'
 
-  createUser(data: any): Observable<any> {
-    return this.http.post(this.baseUrl, data)
+  createUser(data: any): Observable<IUser> {
+    return this.http.post<IUser>(this.baseUrl, data)
   }
 
   getAllUsers(): Observable<IUser[]> {
@@ -23,11 +23,11 @@ export class UsersService {
     return this.http.get<IUser>(`${this.baseUrl}/${id}`)
   }
 
-  updateUser(id: number, data: any): Observable<any> {
-    return this.http.put(`${this.baseUrl}/${id}`, data)
+  updateUser(id: number, data: any): Observable<IUser> {
+    return this.http.put<IUser>(`${this.baseUrl}/${id}`, data)
   }
 
-  deleteUser(id: number): Observable<any> {
-    return this.http.delete(`${this.baseUrl}/${id}`)
+  deleteUser(id: number): Observable<IUser> {
+    return this.http.delete<IUser>(`${this.baseUrl}/${id}`)
   }
 }
