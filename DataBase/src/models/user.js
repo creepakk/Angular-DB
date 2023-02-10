@@ -7,7 +7,7 @@ class User extends Model { }
 User.init({
     name: { type: Sequelize.STRING },
     surname: { type: Sequelize.STRING }
-}, { sequelize, modelName: 'person', timestamps: false, tableName: 'person' })
+}, { sequelize, modelName: 'users', timestamps: false, tableName: 'users' })
 
 
 module.exports = User

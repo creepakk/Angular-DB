@@ -1,41 +1,41 @@
 const Post = require('../models/post')
 
+const PostService = require('../services/post.service')
+
 class PostController {
     async createPost(req, res) {
         const { title, content } = req.body
-        const post = await Post.create({ title, content, user_id: req.params.id })
-        res.json(post)
+        const data = {
+            title,
+            content,
+            user_id: req.params.id
+        }
+        res.json(await Post.create(data))
     }
 
     async getPost(req, res) {
-        const post = await Post.findByPk(req.params.id)
-        res.send(post)
+        const id = req.params.id
+        res.json(await PostService.getPost(id))
     }
 
     async updatePost(req, res) {
         const { title, content } = req.body
-        const post = await Post.update({ title, content }, {
-            where: { id: req.params.id },
-            returning: true
-        })
-        res.json(post[1][0])
+        const id = req.params.id
+        res.json(await PostService.updatePost(id, { title, content }))
     }
 
     async deletePost(req, res) {
-        await Post.destroy({
-            where: { id: req.params.id }
-        })
-        res.json()
+        const id = req.params.id
+        res.json(await PostService.deletePost(id))
     }
 
     async getPostsByUser(req, res) {
-        const posts = await Post.findAll({ where: { user_id: req.params.id } })
-        res.json(posts)
+        const id = req.params.id
+        res.json(await PostService.getPostsByUser(id))
     }
 
     async getPosts(req, res) {
-        const posts = await Post.findAll()
-        res.json(posts)
+        res.json(await PostService.getPosts())
     }
 }
 

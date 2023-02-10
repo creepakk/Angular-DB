@@ -8,6 +8,6 @@ Post.init({
   title: { type: Sequelize.STRING },
   content: { type: Sequelize.STRING },
   user_id: { type: Sequelize.INTEGER }
-}, { sequelize, modelName: 'post', timestamps: false, tableName: 'post' })
+}, { sequelize, modelName: 'posts', timestamps: false, tableName: 'posts' })
 
 module.exports = Post
