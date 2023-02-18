@@ -1,0 +1,141 @@
+.gallery {
+	margin-top: 11.458vw;
+	h1 {
+		font-size: 2.528vw;
+		line-height: 2.5vw;
+	}
+	div {
+		width: 25.208vw;
+		height: 32.917vw;
+	}
+
+	span {
+		display: inline-block;
+		background-color: #232323;
+		width: 3.611vw;
+		height: 0.2083vw;
+	}
+}
+
+.see_places {
+	padding: 27.778vw 23vw 7.986vw;
+	background: url(../img/scribble_dark_5096.png) 9vw bottom/29.444vw no-repeat padding-box;
+	text-align: center;
+	img {
+		width: 5.0594vw;
+	}
+	h1 {
+		font-size: 6.785vw;
+		line-height: 6.736vw;
+		margin: 4.305vw 0;
+	}
+	span {
+		font-family: Cardo;
+		font-size: 6.785vw;
+		line-height: 6.736vw;
+		font-style: italic;
+		text-decoration: underline;
+	}
+}
+
+.description {
+	padding-top: 7.986vw;
+	padding-bottom: 3.472vw;
+	position: relative;
+}
+.description_image {
+	width: 39.236vw;
+	height: 53.889vw;
+	margin-right: 2.986vw;
+}
+.tape {
+	position: absolute;
+	width: 4.931vw;
+	top: 25.694vw;
+	left: 6vw;
+	opacity: 0.9;
+}
+.description_content {
+	h1 {
+		font-size: 2.528vw;
+		line-height: 3.472vw;
+		text-decoration: underline;
+		margin-right: 3.125vw;
+	}
+	img {
+		width: 29.028vw;
+		height: 22.361vw;
+		margin-bottom: 5.416vw;
+	}
+}
+.button_arrow {
+	background: url(../img/line_5111.png) left 50%/9.653vw no-repeat,
+		url(../img/line_5110.png) right/auto 3.8194vw no-repeat;
+	position: absolute;
+	right: 8.2vw;
+	bottom: 6.528vw;
+	width: 9.792vw;
+	height: 3.8194vw;
+}
+
+@media screen and (orientation: portrait) {
+	.gallery {
+		margin-top: 0;
+		h1 {
+			font-size: 6vw;
+			line-height: 4.5vw;
+		}
+		div {
+			margin-top: 5vw;
+			width: 100%;
+			height: 90vw;
+		}
+		span {
+			width: 9vw;
+			height: 0.5vw;
+		}
+	}
+	.see_places {
+		background: 0;
+		padding: 15vw 5vw 5vw;
+		img {
+			width: 13vw;
+		}
+		h1 {
+			font-size: 13vw;
+			line-height: 12.7vw;
+			margin: 5vw;
+		}
+		span {
+			font-size: 13vw;
+			line-height: 12.7vw;
+		}
+		h6 {
+			font-size: 3.4vw;
+		}
+	}
+	.description_image {
+		display: none;
+	}
+	.tape {
+		display: none;
+	}
+	.description {
+		padding-top: 5vw;
+		padding-bottom: 15vw;
+	}
+	.description_content {
+		h1 {
+			margin: 5vw 0;
+			font-size: 5.5vw;
+			line-height: 5.3vw;
+		}
+		img {
+			width: 100%;
+			height: auto;
+			margin-bottom: 0;
+		}
+	}
+	.button_arrow {
+	}
+}

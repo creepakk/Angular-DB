@@ -1,11 +1,29 @@
-<div class="absolute px-4 top-0 right-0 left-0 h-[50px] flex justify-between items-center bg-blue-500 text-white">
-    <h1>{{ title }}</h1>
-    <p>
-        <a routerLink="posts" class="m-4">
-            Posts
-        </a>
-        <a routerLink="user">
-            Users
-        </a>
-    </p>
-</div>
+<header>
+    <div class="burger_button">
+        <input type="checkbox" id="check-menu">
+        <label for="check-menu">
+            <span class="burger_line first"></span>
+            <span class="burger_line second"></span>
+            <span class="burger_line third"></span>
+            <span class="burger_line fourth"></span>
+        </label>
+        <ul class="menu_mobile">
+            <li><a routerLink="/">Home</a></li>
+            <li><a routerLink="/guides">Guides</a></li>
+            <li><a routerLink="/flights">Flights</a></li>
+            <li><a routerLink="/about">About</a></li>
+            <li><a routerLink="/posts">Posts</a></li>
+            <li><a routerLink="/users">Users</a></li>
+            <li><a routerLink="/contact">Contact Us</a></li>
+        </ul>
+    </div>
+    <nav class="menu_pc">
+        <a class="button_home" routerLink="/">Home</a>
+        <a routerLink="/guides">Guides</a>
+        <a routerLink="/flights">Flights</a>
+        <a routerLink="/about">About</a>
+        <a routerLink="/posts">Posts</a>
+        <a routerLink="/users">Users</a>
+        <a class="button_contact" routerLink="/contact">Contact Us</a>
+    </nav>
+</header>

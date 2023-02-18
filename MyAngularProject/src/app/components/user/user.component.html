@@ -1,12 +1,10 @@
-<div>
-    <p class="mb-1">
-        <span class="min-w-[60px] text-center inline-block bg-blue-400 border border-gray-700">{{user.id}}</span>
-        <span class="min-w-[200px] text-center inline-block bg-blue-500 border border-gray-700">{{user.name}}</span>
-        <span class="min-w-[200px] text-center inline-block bg-blue-600 border border-gray-700">{{user.surname}}</span>
-        <span>
-            <button routerLink="{{user.id}}" class="ml-1 min-w-[80px] inline-block bg-blue-500 border border-gray-700">
-                To User
-            </button>
-        </span>
+<div class="user_row">
+    <p>
+        <span class="user_id">{{user.id}}</span>
+        <span class="user_name">{{user.name}}</span>
+        <span class="user_surname">{{user.surname}}</span>
+        <button routerLink="/user/{{user.id}}" class="to_user">
+            To User
+        </button>
     </p>
 </div>

@@ -1,0 +1,45 @@
+.create {
+	background: url(../img/scribble_light_5041.png) 0px 3.472vw/30.07vw no-repeat,
+		url(../img/scribble_light_5043.png) right 16.32vw/32.986vw no-repeat, #232323;
+	margin-top: 11.111vw;
+	padding: 3.472vw 34.72vw;
+	color: #e9e7e7;
+	text-align: center;
+	h1 {
+		font-size: 3.854vw;
+		line-height: 3.819vw;
+		color: #e9e7e7;
+	}
+	p {
+		padding: 2.431vw 0;
+		text-align: center;
+	}
+}
+
+.button_travel {
+	padding: 1.25vw 3.958vw;
+	background-color: transparent;
+	color: #e9e7e7;
+	border: 0.208vw solid #e9e7e7;
+	border-radius: 0.486vw;
+	font-weight: 700;
+}
+
+@media screen and (orientation: portrait) {
+	.create {
+		margin-top: 0;
+		background: #232323;
+		padding: 5vw 5vw;
+		h1 {
+			font-size: 8vw;
+			line-height: 7.5vw;
+		}
+		p {
+			padding: 4vw 0;
+		}
+		.button_travel {
+			padding: 4vw 10vw;
+			border-radius: 1.5vw;
+		}
+	}
+}

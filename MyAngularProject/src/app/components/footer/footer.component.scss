@@ -1,0 +1,61 @@
+.footer {
+    background: url(../../../assets/img/scribble_dark_5334.png) left 27.778vw/27.708vw no-repeat, #c4c4c4;
+    margin-top: 14.931vw;
+    padding: 8.2vw;
+    h1 {
+        font-size: 4.403vw;
+        line-height: 4.375vw;
+        margin-right: 8.3vw;
+        width: 16.667vw;
+    }
+    h6 {
+        font-size: 1.743vw;
+        line-height: 3.472vw;
+        font-weight: 900;
+    }
+    p {
+        font-size: 1.451vw;
+        line-height: 3.472vw;
+        width: 100%;
+        margin-top: 7.639vw;
+        text-align: center;
+    }
+}
+.links {
+    width: 57.7vw;
+    a {
+        white-space: nowrap;
+        text-align: left;
+        font-size: 1.451vw;
+        margin: 1.0104vw 0;
+        font-weight: 400;
+        width: 13.194vw;
+        color: #232323;
+    }
+}
+@media screen and (orientation: portrait) {
+    .footer {
+        margin-top: 10vw;
+        background: #c4c4c4;
+        padding: 5vw;
+        h1 {
+            display: none;
+        }
+        h6 {
+            font-size: 3.4vw;
+            margin-bottom: 2vw;
+        }
+        p {
+            font-size: 2vw;
+            margin-top: 5vw;
+        }
+    }
+    .links {
+        width: 90vw;
+        a {
+            margin: 2vw 0;
+            font-size: 3vw;
+            width: 36vw;
+        }
+    }
+}

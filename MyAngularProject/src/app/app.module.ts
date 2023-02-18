@@ -13,6 +13,12 @@ import { FormsModule } from '@angular/forms';
 import { PostComponent } from './components/post/post.component';
 import { PostsPageComponent } from './pages/posts-page/posts-page.component';
 import { PostPageComponent } from './pages/post-page/post-page.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { GuidesPageComponent } from './pages/guides-page/guides-page.component';
+import { FlightsPageComponent } from './pages/flights-page/flights-page.component';
+import { AboutPageComponent } from './pages/about-page/about-page.component';
+import { ContactPageComponent } from './pages/contact-page/contact-page.component';
+import { CreateUserFormComponent } from './components/create-user-form/create-user-form.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +31,12 @@ import { PostPageComponent } from './pages/post-page/post-page.component';
     PostComponent,
     PostsPageComponent,
     PostPageComponent,
+    FooterComponent,
+    GuidesPageComponent,
+    FlightsPageComponent,
+    AboutPageComponent,
+    ContactPageComponent,
+    CreateUserFormComponent,
   ],
   imports: [
     BrowserModule,

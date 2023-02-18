@@ -1,0 +1,10 @@
+.create_user_form {
+    position: relative;
+    .form_label {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border: 2px solid rgb(75, 35, 35);
+    }
+}

@@ -1,0 +1,39 @@
+.users {
+    padding-top: 5vw;
+    h1 {
+        text-align: center;
+        font-size: 4vw;
+        margin-bottom: 5vw;
+    }
+}
+.columns {
+    span {
+        background-color: #e9e7e7;
+        text-align: center;
+        display: inline-block;
+        border: 2px solid rgb(75, 35, 35);
+        padding: 0.5vw 0;
+        margin: -1px;
+    }
+    .col_id {
+        width: 10vw;
+    }
+    .col_name {
+        width: 15vw;
+    }
+    .col_surname {
+        width: 15vw;
+    }
+    margin-bottom: 1vw;
+}
+.create_button {
+    display: block;
+    border: 2px solid rgb(75, 35, 35);
+    padding: 0.5vw 0;
+    margin: -1px;
+    font-size: 21.9px;
+    font-family: Lato;
+    font-weight: lighter;
+    background-color: #e9e7e7;
+    width: 20vw;
+}

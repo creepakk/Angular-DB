@@ -1,0 +1,153 @@
+@import "_zero_style";
+@import "_fonts";
+
+body {
+    background: url(../img/scribble_lightest_5031.png) left 22.292vw/42.2vw no-repeat,
+        url(../img/scribble_dark_5027.png) right 33.333vw/8.333vw no-repeat,
+        url(../img/scribble_dark_5079.png) left 82.778vw/3.264vw no-repeat,
+        url(../img/scribble_dark_5081.png) right 112.083vw/5.069vw no-repeat,
+        url(../img/scribble_lightest_5098.png) right 142.917vw/18.472vw no-repeat, #e9e7e7;
+    letter-spacing: -0.025em;
+}
+
+nav,
+h6,
+p,
+span {
+    font-family: Lato;
+}
+a {
+    font-family: Lato;
+    font-size: 1.458vw;
+    line-height: 1.2;
+    background-color: transparent;
+}
+// header {
+//     a {
+//         color: #515155;
+//         font-size: 1.458vw;
+//         line-height: 1.2;
+//         font-weight: 300;
+//     }
+//     padding: 5.556vw 8.2vw 0;
+// }
+
+div {
+    color: #232323;
+}
+h1 {
+    font-family: Cardo;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    color: #232323;
+}
+h6 {
+    font-size: 1.736vw;
+    line-height: 1.2;
+    font-weight: 900;
+}
+p {
+    font-size: 1.16vw;
+    line-height: 1.2;
+    font-weight: 400;
+    text-align: justify;
+}
+span {
+    font-size: 20.9px;
+    line-height: 1.2;
+    font-weight: 300;
+    color: #232323;
+}
+.block {
+    padding: 0 8.2vw;
+}
+.flex {
+    display: flex;
+}
+
+// .footer {
+//     background: url(../img/scribble_dark_5334.png) left 27.778vw/27.708vw no-repeat, #c4c4c4;
+//     margin-top: 14.931vw;
+//     padding: 8.2vw;
+//     h1 {
+//         font-size: 4.403vw;
+//         line-height: 4.375vw;
+//         margin-right: 8.3vw;
+//         width: 16.667vw;
+//     }
+//     h6 {
+//         font-size: 1.743vw;
+//         line-height: 3.472vw;
+//         font-weight: 900;
+//     }
+//     p {
+//         font-size: 1.451vw;
+//         line-height: 3.472vw;
+//         width: 100%;
+//         margin-top: 7.639vw;
+//         text-align: center;
+//     }
+// }
+// .links {
+//     width: 57.7vw;
+//     a {
+//         white-space: nowrap;
+//         text-align: left;
+//         font-size: 1.451vw;
+//         margin: 1.0104vw 0;
+//         font-weight: 400;
+//         width: 13.194vw;
+//         color: #232323;
+//     }
+// }
+
+@media screen and (orientation: portrait) {
+    body {
+        background: #e9e7e7;
+    }
+    .block {
+        padding: 0 5vw;
+    }
+    a {
+        font-size: 4vw;
+    }
+    h6 {
+        font-size: 3.4vw;
+    }
+    p {
+        font-size: 3.5vw;
+    }
+    // .footer {
+    //     margin-top: 10vw;
+    //     background: #c4c4c4;
+    //     padding: 5vw;
+    //     h1 {
+    //         display: none;
+    //     }
+    //     h6 {
+    //         font-size: 3.4vw;
+    //         margin-bottom: 2vw;
+    //     }
+    //     p {
+    //         font-size: 2vw;
+    //         margin-top: 5vw;
+    //     }
+    // }
+    // .links {
+    //     width: 90vw;
+    //     a {
+    //         margin: 2vw 0;
+    //         font-size: 3vw;
+    //         width: 36vw;
+    //     }
+    // }
+}
+
+// @import "_menu-mobile.scss";
+@import "_welcome.scss";
+@import "_create.scss";
+@import "_gallery-see_places-description.scss";
+@import "_choose-more_info.scss";
+@import "_reviews-be_updated.scss";
+
+@import "_flex.scss";
