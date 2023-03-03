@@ -31,10 +31,4 @@ export class UsersPageComponent {
       next: (users) => this.users = users
     })
   }
-
-  createUser(): void {
-    this.usersService.createUser(this.data).subscribe({
-      next: () => { document.location.reload() }
-    })
-  }
 }

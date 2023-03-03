@@ -1,41 +1,24 @@
-<div class="mb-2 p-3 w-[70%] border border-gray-300 rounded">
+<div class="post">
 
-    <h1><span class="font-light">Title: </span>{{post.title}}</h1>
-    <p><span class="font-light">Content: </span>{{post.content}}</p>
+    <p><span class="">Title: {{post.title}}</span></p>
+    <p><span class="">Content: {{post.content}}</span></p>
 
-    <button class="font-light border rounded border-gray-300 mr-2"
-        (click)="detailsIsChecked = !detailsIsChecked">Details</button>
+    <div class="post_buttons">
+        <button class="form_button" (click)="detailsIsChecked = !detailsIsChecked">Details</button>
 
-    <button class="font-light border rounded border-gray-300 mr-2" routerLink="/post/{{post.id}}">To Post</button>
+        <button class="form_button" routerLink="/post/{{post.id}}">To Post</button>
 
-    <button class="font-light border rounded border-gray-300 mr-2" (click)="updateIsChecked=!updateIsChecked">Update
-        Post</button>
+        <button class="form_button" (click)="updateIsChecked=!updateIsChecked">Update Post</button>
 
-    <button class="font-light border rounded border-gray-300 mr-2" (click)="deletePost()">
-        Delete Post
-    </button>
+        <button class="form_button" (click)="deletePost()">Delete Post</button>
+    </div>
 
-    <div *ngIf="detailsIsChecked">
-        <p><span class="font-light">Id: </span> {{post.id}} <br><span class="font-light">User Id:
+    <div class="post_details" *ngIf="detailsIsChecked">
+        <p><span class="">Id: </span> {{post.id}} <br><span class="">User Id:
             </span>{{post.user_id}} </p>
     </div>
 
-    <div *ngIf="updateIsChecked">
-        <form>
-            <div class="flex flex-col">
-                <label for="title">Title</label>
-                <input type="text" id="title" name="Title" class="w-[500px] border rounded border-gray-300"
-                    [(ngModel)]="post.title">
-            </div>
-            <div class="flex flex-col">
-                <label for="content">Content</label>
-                <textarea type="text" id="content" name="content" class="w-[500px] border rounded border-gray-300"
-                    [(ngModel)]="post.content"></textarea>
-            </div>
-            <button class="mt-2 w-[110px] h-[35px] inline-block bg-blue-400 border border-gray-700" type="submit"
-                (click)="updatePost()">
-                Confirm
-            </button>
-        </form>
+    <div class="update_post_form" *ngIf="updateIsChecked">
+        <app-update-post-form [post]="post"></app-update-post-form>
     </div>
 </div>

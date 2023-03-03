@@ -19,10 +19,7 @@ export class UserPageComponent {
     surname: ''
   }
 
-  data = {
-    title: '',
-    content: ''
-  }
+
 
   posts: IPost[] = []
 
@@ -51,27 +48,15 @@ export class UserPageComponent {
     )
   }
 
-  updateUser(): void {
-    this.usersService.updateUser(this.user.id, this.user).subscribe({
-      next: () => document.location.reload()
-    })
-  }
-
   deleteUser(): void {
     this.usersService.deleteUser(this.user.id).subscribe({
-      next: () => this.router.navigate(['user'])
+      next: () => this.router.navigate(['users'])
     })
   }
 
   getPostsByUser(user_id: number): void {
     this.postsService.getPostsByUser(user_id).subscribe({
       next: (posts) => this.posts = posts
-    })
-  }
-
-  createPost(): void {
-    this.postsService.createPost(this.user.id, this.data).subscribe({
-      next: (data) => { this.data = data; document.location.reload() }
     })
   }
 }

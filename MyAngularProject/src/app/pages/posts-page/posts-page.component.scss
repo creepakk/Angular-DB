@@ -1,0 +1,27 @@
+h1 {
+    margin: 5vw 0;
+    text-align: center;
+    font-size: 4vw;
+}
+.posts_page_post {
+    border: 1px solid #232323;
+    border-radius: 1vw;
+    padding: 2vw;
+    margin: 1vw;
+
+    button {
+        margin: 0;
+        padding: 1vw;
+    }
+}
+.posts_title {
+    font-size: 3vw;
+    margin: 0 0 2vw 0;
+}
+.posts_content {
+    font-size: 2vw;
+    margin-bottom: 1vw;
+}
+.posts_info {
+    margin-bottom: 1vw;
+}

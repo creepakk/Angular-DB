@@ -17,16 +17,6 @@ export class PostComponent {
 
   constructor(private postsService: PostsService) { }
 
-  ngOnInit() {
-
-  }
-
-  updatePost(): void {
-    this.postsService.updatePost(this.post.id, this.post).subscribe({
-      next: () => document.location.reload()
-    })
-  }
-
   deletePost(): void {
     this.postsService.deletePost(this.post.id).subscribe({
       next: () => document.location.reload()

@@ -1,12 +1,14 @@
-<h1 class="mb-3">{{title}}</h1>
+<div class="block">
+    <h1 class="title">{{title}}</h1>
 
-<div class="text-center">
-    <h1 class="font-bold mb-3">{{post.title}}</h1>
+    <div class="post_page_content">
+        <h1>{{post.title}}</h1>
 
-    <p class="mb-3">{{post.content}}</p>
+        <p class="post_content">{{post.content}}</p>
 
-    <p class="font-light flex flex-col">
-        <span>id: {{post.id}}</span>
-        <span>user id: {{post.user_id}}</span>
-    </p>
+        <p class="post_user_id">
+            <span>id: {{post.id}} </span>
+            <span>user id: {{post.user_id}}</span>
+        </p>
+    </div>
 </div>

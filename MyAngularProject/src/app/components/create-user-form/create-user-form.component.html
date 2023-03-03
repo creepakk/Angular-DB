@@ -1,13 +1,13 @@
 <form>
-    <div class="form_label name_label">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" class="" [(ngModel)]="data.name">
+    <div class="form_line create_user_line">
+        <input class="form_input" type="text" id="name" name="name" placeholder=" " [(ngModel)]="data.name">
+        <label class="form_label" for="name">Name</label>
     </div>
-    <div class="form_label surname_label">
-        <label for="surname">Surname</label>
-        <input type="text" id="surname" name="surname" class="" [(ngModel)]="data.surname">
+    <div class="form_line create_user_line">
+        <input class="form_input" type="text" id="surname" name="surname" placeholder=" " [(ngModel)]="data.surname">
+        <label class="form_label" for="surname">Surname</label>
     </div>
-    <button type="submit" (click)="createUser()" class="confirm_button">
+    <button type="submit" (click)="createUser()" class="form_button form_confirm">
         Confirm
     </button>
 </form>

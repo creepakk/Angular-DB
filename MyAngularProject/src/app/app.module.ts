@@ -19,6 +19,9 @@ import { FlightsPageComponent } from './pages/flights-page/flights-page.componen
 import { AboutPageComponent } from './pages/about-page/about-page.component';
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 import { CreateUserFormComponent } from './components/create-user-form/create-user-form.component';
+import { CreatePostFormComponent } from './components/create-post-form/create-post-form.component';
+import { UpdateUserFormComponent } from './components/update-user-form/update-user-form.component';
+import { UpdatePostFormComponent } from './components/update-post-form/update-post-form.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +40,9 @@ import { CreateUserFormComponent } from './components/create-user-form/create-us
     AboutPageComponent,
     ContactPageComponent,
     CreateUserFormComponent,
+    CreatePostFormComponent,
+    UpdateUserFormComponent,
+    UpdatePostFormComponent,
   ],
   imports: [
     BrowserModule,

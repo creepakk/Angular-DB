@@ -1,4 +1,4 @@
-<div class="users block">
+<div class="block">
     <h1>{{title | titlecase}}</h1>
 
     <div class="columns">
@@ -14,21 +14,8 @@
             Create User
         </button>
 
-        <div *ngIf="isChecked" class="create_user_form">
+        <div class="create_user_form" *ngIf="isChecked" class="create_user_form">
             <app-create-user-form></app-create-user-form>
-            <!-- <form>
-                <div class="form_label name_label">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" class="" [(ngModel)]="data.name">
-                </div>
-                <div class="form_label surname_label">
-                    <label for="surname">Surname</label>
-                    <input type="text" id="surname" name="surname" class="" [(ngModel)]="data.surname">
-                </div>
-                <button type="submit" (click)="createUser()" class="confirm_button">
-                    Confirm
-                </button>
-            </form> -->
         </div>
     </div>
 </div>

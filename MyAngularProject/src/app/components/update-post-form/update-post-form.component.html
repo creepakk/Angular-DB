@@ -1,0 +1,14 @@
+<form>
+    <div class="form_line">
+        <input class="form_input" type="text" id="title" name="title" placeholder=" " [(ngModel)]="post.title">
+        <label class="form_label" for="title">Title</label>
+    </div>
+    <div class="form_line">
+        <textarea class="form_input" type="text" id="content" name="content" placeholder=" "
+            [(ngModel)]="post.content"></textarea>
+        <label class="form_label" for="content">Content</label>
+    </div>
+    <button class="form_button update_post_form_button" type="submit" (click)="updatePost()">
+        Confirm
+    </button>
+</form>

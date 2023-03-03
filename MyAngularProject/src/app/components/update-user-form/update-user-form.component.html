@@ -1,0 +1,13 @@
+<form>
+    <div class="form_line">
+        <input type="text" id="name" name="name" class="form_input" placeholder=" " [(ngModel)]="user.name">
+        <label for="name" class="form_label">Name</label>
+    </div>
+    <div class="form_line">
+        <input type="text" id="surname" name="surname" class="form_input" placeholder=" " [(ngModel)]="user.surname">
+        <label for="surname" class="form_label">Surname</label>
+    </div>
+    <button class="form_button update_user_form_button" type="submit" (click)="updateUser()">
+        Confirm
+    </button>
+</form>
